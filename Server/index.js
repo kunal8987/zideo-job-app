@@ -2,8 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Src/Utils/Database.js";
-// import { userRouter } from "./Src/Routes/User.routes.js";
+import { userRouter } from "./Src/Routes/User.routes.js";
 import { candidateRouter } from "./Src/Routes/Candidate.routes.js";
+import { recuriterRouter } from "./Src/Routes/Recuriter.routes.js";
 
 // ENV CONFIGURATION
 
@@ -24,8 +25,9 @@ app.use(cors());
 
 // ROUTES 
 
-// app.use('/api/v1/auth',userRouter)
+app.use('/api/v1/auth',userRouter)
 app.use('/api/v1/candidate',candidateRouter)
+app.use('/api/v1/recuriter',recuriterRouter)
 
 
 // APP LISTING FUNCTION
