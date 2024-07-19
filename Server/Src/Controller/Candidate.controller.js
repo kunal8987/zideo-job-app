@@ -150,6 +150,9 @@ export const updateEducation = async (req, res) => {
     }
 };
 
+
+// CREATE EXPERIENCE FUNCTION 
+
 export const createExperience = async (req, res) => {
     try {
         const { title, company, startDate, endDate } = req.body;
@@ -190,6 +193,8 @@ export const createExperience = async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 };
+
+//UPDATE EXPERIENCE FUNCTION 
 
 export const updateExperience = async (req, res) => {
     try {
